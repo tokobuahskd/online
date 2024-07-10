@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Buah</title>
+    <!-- Link ke Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link ke animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Link ke Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        .navbar-custom {
+            background-color: white;
+        }
+
+        .footer-custom {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .navbar-brand img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .header-background {
+            position: relative;
+            background: url('img/h1.jpeg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 200px 0;
+            text-align: center;
+        }
+
+        .header-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(76, 175, 80, 0.5);
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 18px;
+        }
+
+        .social-icons .social-icon {
+            color: white;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        .social-icons .social-icon:hover {
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+       <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.png" class="d-inline-block align-top" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#beranda">Beranda <span class="sr-only">(current)</span></a>
+                    </li>
+                       <li class="nav-item">
+                        <a class="nav-link" href="artikel.html">Artikel</a> <!-- Link ke halaman artikel -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produk">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tentang">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontak">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Header -->
+    <header class="header-background" id="beranda">
+        <div class="container header-content">
+            <h1 class="animate__animated animate__fadeInDown">Selamat Datang di Toko Buah Kami</h1>
+            <p class="animate__animated animate__fadeInDown animate__delay-1s">Temukan Buah Segar dan Berkualitas Tinggi!</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mt-5 pt-5">
+        <section id="produk" class="mt-4">
+            <h2 class="animate__animated animate__fadeInUp">Produk Kami</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card animate__animated animate__fadeIn">
+                        <img src="img/b1.webp" class="card-img-top" alt="Jeruk">
+                        <div class="card-body">
+                            <h5 class="card-title">Jeruk</h5>
+                            <p class="card-text">Jeruk adalah sumber vitamin C yang baik dan menyegarkan. Cocok untuk dimakan langsung atau dibuat jus.</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalJeruk">Selengkapnya</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card animate__animated animate__fadeIn">
+                        <img src="img/b2.jpg" class="card-img-top" alt="Apel">
+                        <div class="card-body">
+                            <h5 class="card-title">Apel</h5>
+                            <p class="card-text">Apel segar, renyah, dan penuh dengan serat. Ideal untuk camilan sehat dan juga bagus untuk salad.</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalApel">Selengkapnya</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card animate__animated animate__fadeIn">
+                        <img src="img/b6.png" class="card-img-top" alt="Pisang">
+                        <div class="card-body">
+                            <h5 class="card-title">Pisang</h5>
+                            <p class="card-text">Pisang kaya akan potassium dan sangat baik untuk energi cepat. Sangat cocok untuk sarapan atau camilan sebelum berolahraga.</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPisang">Selengkapnya</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card animate__animated animate__fadeIn">
+                        <img src="img/b4.jpg" class="card-img-top" alt="Matoa">
+                        <div class="card-body">
+                            <h5 class="card-title">Matoa</h5>
+                            <p class="card-text">Matoa manis dan berair, sempurna untuk camilan sehat atau tambahan pada salad buah.</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalMatoa">Selengkapnya</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card animate__animated animate__fadeIn">
+                        <img src="img/b5.png" class="card-img-top" alt="Rambutan">
+                        <div class="card-body">
+                            <h5 class="card-title">Rambutan</h5>
+                            <p class="card-text">Rambutan segar dengan rasa manis dan sedikit asam. Ideal untuk dikonsumsi langsung atau dibuat salad buah.</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalRambutan">Selengkapnya</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card animate__animated animate__fadeIn">
+                        <img src="img/b7.png" class="card-img-top" alt="Semangka">
+                        <div class="card-body">
+                            <h5 class="card-title">Semangka</h5>
+                            <p class="card-text">Semangka adalah buah yang sangat menyegarkan dan mengandung banyak air, sempurna untuk melepas dahaga di hari panas.</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSemangka">Selengkapnya</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tentang Kami -->
+        <section id="tentang" class="mt-4">
+            <h2 class="animate__animated animate__fadeInUp">Tentang Kami</h2>
+            <p class="animate__animated animate__fadeIn">Selamat datang di Toko Buah Kami! Kami adalah penyedia buah segar dan berkualitas tinggi yang berkomitmen untuk memberikan yang terbaik kepada pelanggan kami. Kami percaya bahwa kesehatan yang baik dimulai dari makanan yang sehat, dan itulah sebabnya kami hanya menyediakan buah-buahan terbaik yang dipetik langsung dari kebun pilihan. Dengan berbagai pilihan buah yang segar dan lezat, kami siap memenuhi kebutuhan buah Anda setiap hari. Terima kasih telah memilih Toko Buah Kami!</p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalTentang">Selengkapnya</button>
+        </section>
+
+        <!-- Kontak -->
+        <section id="kontak" class="mt-4">
+            <h2 class="animate__animated animate__fadeInUp">Kontak Kami</h2>
+            <p class="animate__animated animate__fadeIn">Jika Anda memiliki pertanyaan atau ingin memesan buah, jangan ragu untuk menghubungi kami melalui informasi berikut:</p>
+            <ul class="animate__animated animate__fadeIn">
+                <li>Email: info@tokobuah.com</li>
+                <li>Telepon: +62 123 456 789</li>
+                <li>Alamat: Jalan Buah Segar No. 1, Jakarta</li>
+            </ul>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalKontak">Selengkapnya</button>
+        </section>
+    </main>
+    <br>
+    
+    <!-- Footer -->
+    <footer class="footer-custom py-3 bg-success">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-md-left text-center mb-md-0 mb-3">
+                    <p class="mb-0 text-white">Hak Cipta &copy; 2024 Toko Buah</p>
+                </div>
+                <div class="col-md-6 text-md-right text-center">
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook text-white"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter text-white"></i></a>
+                        <a href="https://www.instagram.com/susana.nena.7319?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-icon"><i class="fab fa-instagram text-white"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Templates -->
+    <div class="modal fade" id="modalJeruk" tabindex="-1" role="dialog" aria-labelledby="modalJerukLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalJerukLabel">Detail Produk - Jeruk</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Jeruk adalah buah yang kaya akan vitamin C, baik untuk menjaga sistem kekebalan tubuh, serta menyegarkan. Jeruk bisa dimakan langsung atau dibuat jus yang menyegarkan.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="modalApel" tabindex="-1" role="dialog" aria-labelledby="modalApelLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalApelLabel">Detail Produk - Apel</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Apel adalah buah yang renyah dan penuh dengan serat. Apel sangat cocok untuk dijadikan camilan sehat dan juga bisa digunakan sebagai bahan dalam salad buah.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalPisang" tabindex="-1" role="dialog" aria-labelledby="modalPisangLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPisangLabel">Detail Produk - Pisang</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Pisang kaya akan potassium yang baik untuk energi cepat. Buah ini sangat cocok untuk sarapan atau camilan sebelum berolahraga.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalMatoa" tabindex="-1" role="dialog" aria-labelledby="modalMatoaLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalMatoaLabel">Detail Produk - Matoa</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Matoa adalah buah manis dan berair, sangat cocok untuk dijadikan camilan sehat atau tambahan dalam salad buah.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalRambutan" tabindex="-1" role="dialog" aria-labelledby="modalRambutanLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalRambutanLabel">Detail Produk - Rambutan</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Rambutan adalah buah dengan rasa manis dan sedikit asam. Buah ini ideal untuk dikonsumsi langsung atau dibuat salad buah.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSemangka" tabindex="-1" role="dialog" aria-labelledby="modalSemangkaLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalSemangkaLabel">Detail Produk - Semangka</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Semangka adalah buah yang sangat menyegarkan dan mengandung banyak air, sempurna untuk melepas dahaga di hari panas.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalTentang" tabindex="-1" role="dialog" aria-labelledby="modalTentangLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTentangLabel">Tentang Kami</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Selamat datang di Toko Buah Kami! Kami adalah penyedia buah segar dan berkualitas tinggi yang berkomitmen untuk memberikan yang terbaik kepada pelanggan kami. Kami percaya bahwa kesehatan yang baik dimulai dari makanan yang sehat, dan itulah sebabnya kami hanya menyediakan buah-buahan terbaik yang dipetik langsung dari kebun pilihan. Dengan berbagai pilihan buah yang segar dan lezat, kami siap memenuhi kebutuhan buah Anda setiap hari. Terima kasih telah memilih Toko Buah Kami!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalKontak" tabindex="-1" role="dialog" aria-labelledby="modalKontakLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalKontakLabel">Kontak Kami</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Jika Anda memiliki pertanyaan atau ingin memesan buah, jangan ragu untuk menghubungi kami melalui informasi berikut:<br>
+                    Email: info@tokobuah.com<br>
+                    Telepon: +62 123 456 789<br>
+                    Alamat: Jalan Buah Segar No. 1, Jakarta
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link ke jQuery, Popper, dan Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
